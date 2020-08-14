@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "start": "nodemon -e ts,json,js -w . -w src --exec babel-node --extensions .ts,.js src/index.ts"
+    "start:nowatch": "babel-node --ignore '[]' --extensions .ts,.js src/index.ts",
+    "start": "nodemon -e ts,json,js -w . -w src --exec yarn start:nowatch"
   },
   "devDependencies": {
     "@babel/node": "^7.10.5",
